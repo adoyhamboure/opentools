@@ -1,0 +1,8 @@
+@use "scss/root";
+@use "scss/theme";
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  color: var(--textColor);
+}
