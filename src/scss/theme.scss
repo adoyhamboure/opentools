@@ -1,0 +1,33 @@
+$bgColor_light: #E6DDC6;
+$bgColor_dark: #4F4557;
+
+$bgColorSecondary_light: #FEF7DC;
+$bgColorSecondary_dark: #6D5D6E;
+
+$textColor_light: #5E454B;
+$textColor_dark: #F4EEE0;
+
+$borderColor_light: #C2B8A3;
+$borderColor_dark: #393646;
+
+@mixin lighten() {
+    --bgColor: #{$bgColor_light};
+    --bgColorSecondary: #{$bgColorSecondary_light};
+    --textColor: #{$textColor_light};
+    --borderColor: #{$borderColor_light};
+}
+
+@mixin darken() {
+    --bgColor: #{$bgColor_dark};
+    --bgColorSecondary: #{$bgColorSecondary_dark};
+    --textColor: #{$textColor_dark};
+    --borderColor: #{$borderColor_dark};
+}
+
+body.dark {
+    @include darken();
+}
+
+body.light {
+    @include lighten();
+}

@@ -1,0 +1,13 @@
+nav {
+    width: var(--navbar-width);
+    height: 100%;
+    background-color: var(--bgColor);
+    position: fixed;
+    border-right: 1px solid var(--borderColor);
+    transform: translateX(-250px);
+    transition: transform 0.15s;
+
+    &.open {
+        transform: translateX(0);
+      }
+}
