@@ -3,11 +3,11 @@
     "beforeDevCommand": "pnpm start --port 1420",
     "beforeBuildCommand": "pnpm build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist/devtools",
+    "distDir": "../dist/opentools",
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "devtools",
+    "productName": "opentools",
     "version": "0.0.0"
   },
   "tauri": {
@@ -37,7 +37,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "devtools",
+        "title": "opentools",
         "width": 800,
         "height": 600
       }

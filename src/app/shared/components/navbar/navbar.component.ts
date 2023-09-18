@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit, inject } from '@angular/core';
 import { NavigationService } from '@shared/services/navigation.service';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { RouterModule } from '@angular/router';
 
 @UntilDestroy()
 @Component({
@@ -9,7 +10,7 @@ import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterModule]
 })
 export class NavbarComponent implements OnInit {
   private readonly navigation = inject(NavigationService);

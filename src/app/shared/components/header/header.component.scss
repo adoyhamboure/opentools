@@ -1,5 +1,5 @@
 .header {
-    height: var(--header-height);
+    height: var(--headerHeight);
     width: 100%;
     background-color: var(--bgColor);
     border-bottom: 1px solid var(--borderColor);
@@ -17,5 +17,25 @@
         background: transparent;
         color: var(--textColor);
         cursor: pointer;
+    }
+
+    .title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        cursor: pointer;
+
+        h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        span {
+            font-size: 40px;
+            margin-top: 3px;
+            color: var(--textColor);
+            transform: translateX(2px);
+        }
     }
 }

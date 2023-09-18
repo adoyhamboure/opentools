@@ -1,0 +1,10 @@
+.wrapper {
+    padding: var(--headerHeight) 0px 0px 0px;
+    margin: 0;
+    background-color: var(--bgColorSecondary);
+    transition: margin 0.15s;
+
+    &.open {
+      margin-left: var(--navbarWidth);
+    }
+  }

@@ -1,0 +1,107 @@
+<div class="view">
+    <div class="view__header" @fadeIn>
+        <h1>Box Shadow / Outline Generator</h1>
+    </div>
+    <app-view-separator></app-view-separator>
+    <div class="view__content" @fadeIn>
+        <div class="view__content__options">
+            <div class="view__content__options__card">
+                <div class="option">
+                    <div class="option__title">
+                        <span>Shift Right : {{shiftRight}} </span>
+                        <button (click)="shiftRight = 0">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="50" [min]="-50" [(ngModel)]="shiftRight"></app-slider>
+                </div>
+    
+                <div class="option">
+                    <div class="option__title">
+                        <span>Shift Down : {{shiftDown}} </span>
+                        <button (click)="shiftDown = 0">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="50" [min]="-50" [(ngModel)]="shiftDown"></app-slider>
+                </div>
+    
+                <div class="option">
+                    <div class="option__title">
+                        <span>Spread : {{spread}} </span>
+                        <button (click)="spread = 0">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="50" [min]="-30" [(ngModel)]="spread"></app-slider>
+                </div>
+    
+                <div class="option">
+                    <div class="option__title">
+                        <span>Blur : {{blur}} </span>
+                        <button (click)="blur = 0">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="50" [min]="0" [(ngModel)]="blur"></app-slider>
+                </div>
+
+                <div class="option">
+                    <div class="option__title">
+                        <span>Opacity : {{opacity/100}} </span>
+                        <button (click)="opacity = 100">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="100" [min]="0" [(ngModel)]="opacity"></app-slider>
+                </div>
+
+                <div class="option">
+                    <div class="option__title">
+                        <span>Color : {{color}} </span>
+                        <button (click)="color = 'rgb(0, 0, 0)'">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <ngx-colors ngx-colors-trigger format="rgba" [(ngModel)]="color"></ngx-colors>
+                </div>
+
+                <div class="option">
+                    <app-checkbox [(ngModel)]="inset">Inset</app-checkbox>
+                </div>
+
+            </div>
+        </div>
+        <div class="view__content__preview">
+            <div class="box-container" [style.background]="boxContainerColor">
+                <div class="box-header">
+                    <div class="color">
+                        <span [style.color]="boxContainerColor">Background : </span>
+                        <ngx-colors ngx-colors-trigger colorPickerControls="no-alpha" format="rgba" [(ngModel)]="boxContainerColor"></ngx-colors>
+
+                    </div>
+                    <div class="color">
+                        <span [style.color]="boxContainerColor">Box : </span>
+                        <ngx-colors ngx-colors-trigger colorPickerControls="no-alpha" format="rgba" [(ngModel)]="boxColor"></ngx-colors>
+                    </div>
+                </div>
+                <div class="box" [style.background]="boxColor" style.boxShadow="{{inset ? 'inset' : ''}} {{shiftRight}}px {{shiftDown}}px {{blur}}px {{spread}}px {{colorWithOpacity}}"></div>
+            </div>
+        </div>
+    </div>
+    <div class="view__result" @fadeIn>
+        <app-code [code]="code"></app-code>
+    </div>
+</div>

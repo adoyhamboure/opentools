@@ -1,4 +1,4 @@
-lockfileVersion: '6.1'
+lockfileVersion: '6.0'
 
 settings:
   autoInstallPeers: true
@@ -8,6 +8,9 @@ dependencies:
   '@angular/animations':
     specifier: ^16.2.4
     version: 16.2.4(@angular/core@16.2.4)
+  '@angular/cdk':
+    specifier: ^16.2.4
+    version: 16.2.4(@angular/common@16.2.4)(@angular/core@16.2.4)(rxjs@7.8.1)
   '@angular/common':
     specifier: ^16.2.4
     version: 16.2.4(@angular/core@16.2.4)(rxjs@7.8.1)
@@ -35,6 +38,21 @@ dependencies:
   '@tauri-apps/api':
     specifier: ^1.4.0
     version: 1.4.0
+  clipboard:
+    specifier: link:@angular/cdk/clipboard
+    version: link:@angular/cdk/clipboard
+  highlight.js:
+    specifier: ^11.8.0
+    version: 11.8.0
+  ngx-colors:
+    specifier: ^3.5.2
+    version: 3.5.2(@angular/animations@16.2.4)(@angular/common@16.2.4)(@angular/core@16.2.4)(@angular/forms@16.2.4)
+  ngx-highlightjs:
+    specifier: ^10.0.0
+    version: 10.0.0(@angular/common@16.2.4)(@angular/core@16.2.4)(rxjs@7.8.1)
+  ngx-toastr:
+    specifier: ^17.0.2
+    version: 17.0.2(@angular/common@16.2.4)(@angular/core@16.2.4)(@angular/platform-browser@16.2.4)
   rxjs:
     specifier: ~7.8.0
     version: 7.8.1
@@ -280,6 +298,21 @@ packages:
     dependencies:
       '@angular/core': 16.2.4(rxjs@7.8.1)(zone.js@0.13.3)
       tslib: 2.6.2
+    dev: false
+
+  /@angular/cdk@16.2.4(@angular/common@16.2.4)(@angular/core@16.2.4)(rxjs@7.8.1):
+    resolution: {integrity: sha512-Hnh7Gs+gAkBnRYIMkDXRElEPAmBFas37isIfOtiqEmkgmSPFxsPpDOXK1soXeDk8U+yNmDWnO0fcHPp/pobHCw==}
+    peerDependencies:
+      '@angular/common': ^16.0.0 || ^17.0.0
+      '@angular/core': ^16.0.0 || ^17.0.0
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/common': 16.2.4(@angular/core@16.2.4)(rxjs@7.8.1)
+      '@angular/core': 16.2.4(rxjs@7.8.1)(zone.js@0.13.3)
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    optionalDependencies:
+      parse5: 7.1.2
     dev: false
 
   /@angular/cli@16.2.1:
@@ -3669,7 +3702,6 @@ packages:
   /entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
-    dev: true
 
   /env-paths@2.2.1:
     resolution: {integrity: sha512-+h1lkLKhZMTYjog1VEpJNG7NZJWcuc2DDk/qsqSTRRCOXiLjeQ1d1/udrUGhqMxUgAlwKNZ0cf2uqan5GLuS2A==}
@@ -4238,6 +4270,11 @@ packages:
   /hdr-histogram-percentiles-obj@3.0.0:
     resolution: {integrity: sha512-7kIufnBqdsBGcSZLPJwqHT3yhk1QTsSlFsVD3kx5ixH/AlgBs9yM1q6DPhXZ8f8gtdqgh7N7/5btRLpQsS2gHw==}
     dev: true
+
+  /highlight.js@11.8.0:
+    resolution: {integrity: sha512-MedQhoqVdr0U6SSnWPzfiadUcDHfN/Wzq25AkXiQv9oiOO/sG0S7XkvpFIqWBl9Yq1UYyYOOVORs5UW2XlPyzg==}
+    engines: {node: '>=12.0.0'}
+    dev: false
 
   /hosted-git-info@6.1.1:
     resolution: {integrity: sha512-r0EI+HBMcXadMrugk0GCQ+6BQV39PiWAZVfq7oIckeGiN7sjRGyQxPdft3nQekFTCQbYxLBH+/axZMeH8UX6+w==}
@@ -5324,6 +5361,48 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
+  /ngx-colors@3.5.2(@angular/animations@16.2.4)(@angular/common@16.2.4)(@angular/core@16.2.4)(@angular/forms@16.2.4):
+    resolution: {integrity: sha512-X9eOnZ+RGD6Rpu+6J6vMt27ZuLLb2pUxFgE9+5hQO6dmB1woOUm99j2Lj0AhK4WLrBF2RiVDlj7tj2YeqzxY1g==}
+    peerDependencies:
+      '@angular/animations': '>=15.0.0'
+      '@angular/common': '>=15.0.0'
+      '@angular/core': '>=15.0.0'
+      '@angular/forms': '>=15.0.0'
+    dependencies:
+      '@angular/animations': 16.2.4(@angular/core@16.2.4)
+      '@angular/common': 16.2.4(@angular/core@16.2.4)(rxjs@7.8.1)
+      '@angular/core': 16.2.4(rxjs@7.8.1)(zone.js@0.13.3)
+      '@angular/forms': 16.2.4(@angular/common@16.2.4)(@angular/core@16.2.4)(@angular/platform-browser@16.2.4)(rxjs@7.8.1)
+      tslib: 2.6.2
+    dev: false
+
+  /ngx-highlightjs@10.0.0(@angular/common@16.2.4)(@angular/core@16.2.4)(rxjs@7.8.1):
+    resolution: {integrity: sha512-F5VXB6vnpiTPMADUoCEkyc2wnqpKUNvfeAP4tO//NrwdQP2sQK6MfPg+jHL2adoJE5LIchsJlpq6C0r+KmlOSA==}
+    peerDependencies:
+      '@angular/common': '>=16.0.0'
+      '@angular/core': '>=16.0.0'
+      rxjs: '>=7.0.0'
+    dependencies:
+      '@angular/common': 16.2.4(@angular/core@16.2.4)(rxjs@7.8.1)
+      '@angular/core': 16.2.4(rxjs@7.8.1)(zone.js@0.13.3)
+      highlight.js: 11.8.0
+      rxjs: 7.8.1
+      tslib: 2.6.2
+    dev: false
+
+  /ngx-toastr@17.0.2(@angular/common@16.2.4)(@angular/core@16.2.4)(@angular/platform-browser@16.2.4):
+    resolution: {integrity: sha512-KehiPx6bkbiUyJbabf0ZA04+ASumS8r/y4wPsUOMI9OrBvBcfq27UQmWuQKoVR8E+9y4Pq7eZkSg2kvxNvpxTA==}
+    peerDependencies:
+      '@angular/common': '>=16.0.0-0'
+      '@angular/core': '>=16.0.0-0'
+      '@angular/platform-browser': '>=16.0.0-0'
+    dependencies:
+      '@angular/common': 16.2.4(@angular/core@16.2.4)(rxjs@7.8.1)
+      '@angular/core': 16.2.4(rxjs@7.8.1)(zone.js@0.13.3)
+      '@angular/platform-browser': 16.2.4(@angular/animations@16.2.4)(@angular/common@16.2.4)(@angular/core@16.2.4)
+      tslib: 2.6.2
+    dev: false
+
   /nice-napi@1.0.2:
     resolution: {integrity: sha512-px/KnJAJZf5RuBGcfD+Sp2pAKq0ytz8j+1NehvgIGFkvtvFrDM3T8E4x/JJODXK9WZow8RRGrbA9QQ3hs+pDhA==}
     os: ['!win32']
@@ -5695,7 +5774,6 @@ packages:
     resolution: {integrity: sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==}
     dependencies:
       entities: 4.5.0
-    dev: true
 
   /parseurl@1.3.3:
     resolution: {integrity: sha512-CiyeOxFT/JZyN5m0z9PfXw4SCBJ6Sygz1Dpl0wqjlhDEGGBP1GnsUVEL0p63hoG1fcj3fHynXi9NYO4nWOL+qQ==}

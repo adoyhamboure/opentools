@@ -1,0 +1,19 @@
+.separator {
+    border: 0;
+    width: 80%;
+    height: 2px;
+    background: var(--textColor);
+    animation: width 0.5s ease-in-out;
+    opacity: 0.3;
+    transform-origin: left;
+    margin: 10px 0;
+}
+
+@keyframes width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
