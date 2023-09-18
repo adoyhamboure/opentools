@@ -8,7 +8,7 @@ describe('BoxShadowGeneratorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [BoxShadowGeneratorComponent]
+      imports: [BoxShadowGeneratorComponent],
     });
     fixture = TestBed.createComponent(BoxShadowGeneratorComponent);
     component = fixture.componentInstance;

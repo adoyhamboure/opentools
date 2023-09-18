@@ -1,0 +1,68 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "plugins": ["import"],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "airbnb-typescript/base"
+      ],
+      "rules": {
+        "max-len": ["error", {
+          "code": 130,
+          "ignoreRegExpLiterals": true
+        }],
+        "@typescript-eslint/explicit-member-accessibility": ["error", {
+          "overrides": {
+            "constructors": "off"
+          }
+        }],
+        "@typescript-eslint/explicit-function-return-type": ["error", {
+          "allowConciseArrowFunctionExpressionsStartingWithVoid": true
+        }],
+        "@typescript-eslint/no-unused-vars": [
+          "warn", {
+            "argsIgnorePattern": "^_"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "(app)",
+            "style": "kebab-case"
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ]
+    }
+  ]
+}

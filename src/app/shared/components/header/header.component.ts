@@ -9,7 +9,7 @@ import { NavigationService } from '@shared/services/navigation.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [ThemeSwitchComponent, RouterModule]
+  imports: [ThemeSwitchComponent, RouterModule],
 })
 export class HeaderComponent {
   private readonly navigation = inject(NavigationService);

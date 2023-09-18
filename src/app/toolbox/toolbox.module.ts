@@ -6,7 +6,7 @@ import { ToolboxRoutingModule } from './toolbox-routing.module';
 @NgModule({
   imports: [
     CommonModule,
-    ToolboxRoutingModule
-  ]
+    ToolboxRoutingModule,
+  ],
 })
 export class ToolboxModule { }

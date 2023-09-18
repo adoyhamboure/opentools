@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './changelogs.component.html',
-  styleUrls: ['./changelogs.component.scss']
+  styleUrls: ['./changelogs.component.scss'],
 })
 export class ChangelogsComponent {
 

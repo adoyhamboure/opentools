@@ -8,12 +8,13 @@ const routes: Routes = [
   },
   {
     path: 'box-shadow',
-    loadComponent: () => import('./views/box-shadow-generator/box-shadow-generator.component').then((c) => c.BoxShadowGeneratorComponent),
+    loadComponent: () => 
+      import('./views/box-shadow-generator/box-shadow-generator.component').then((c) => c.BoxShadowGeneratorComponent),
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ToolboxRoutingModule { }

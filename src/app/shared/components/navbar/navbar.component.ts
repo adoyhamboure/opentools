@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterModule]
+  imports: [CommonModule, RouterModule],
 })
 export class NavbarComponent implements OnInit {
   private readonly navigation = inject(NavigationService);

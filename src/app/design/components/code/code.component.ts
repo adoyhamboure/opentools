@@ -2,7 +2,7 @@ import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HighlightModule } from 'ngx-highlightjs';
 import { ToastrService } from 'ngx-toastr';
-import {Clipboard} from '@angular/cdk/clipboard';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 
 @Component({
@@ -17,10 +17,10 @@ export class CodeComponent {
 
   private readonly toastr = inject(ToastrService);
 
-  private readonly clipboard = inject(Clipboard)
+  private readonly clipboard = inject(Clipboard);
 
   public onCopy(): void {
     this.clipboard.copy(this.code);
-    this.toastr.success('Copied to clipboard', 'Success', {timeOut: 1000});
+    this.toastr.success('Copied to clipboard', 'Success', { timeOut: 1000 });
   }
 }

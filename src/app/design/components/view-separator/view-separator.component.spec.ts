@@ -8,7 +8,7 @@ describe('ViewSeparatorComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ViewSeparatorComponent]
+      declarations: [ViewSeparatorComponent],
     });
     fixture = TestBed.createComponent(ViewSeparatorComponent);
     component = fixture.componentInstance;
