@@ -1,6 +1,14 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NG_VALUE_ACCESSOR, NG_VALIDATORS, ControlValueAccessor, Validator, AbstractControl, ValidationErrors, FormsModule } from '@angular/forms';
+import { 
+  NG_VALUE_ACCESSOR, 
+  NG_VALIDATORS, 
+  ControlValueAccessor, 
+  Validator, 
+  AbstractControl, 
+  ValidationErrors, 
+  FormsModule, 
+} from '@angular/forms';
 
 @Component({
   selector: 'app-slider',

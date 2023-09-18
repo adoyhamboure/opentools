@@ -1,9 +1,9 @@
-import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { AppComponent } from "./app.component";
-import { AppRoutingModule } from "./app-routing.module";
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HIGHLIGHT_OPTIONS } from "ngx-highlightjs";
+import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -14,15 +14,15 @@ import { ToastrModule } from 'ngx-toastr';
     {
       provide: HIGHLIGHT_OPTIONS,
       useValue: {
-        coreLibraryLoader: () => import('highlight.js/lib/core'),
-        lineNumbersLoader: () => import('ngx-highlightjs/line-numbers'), // Optional, only if you want the line numbers
+        coreLibraryLoader: (): Promise<any> => import('highlight.js/lib/core'),
+        lineNumbersLoader: (): Promise<any> => import('ngx-highlightjs/line-numbers'),
         languages: {
-          typescript: () => import('highlight.js/lib/languages/typescript'),
-          css: () => import('highlight.js/lib/languages/css'),
-          xml: () => import('highlight.js/lib/languages/xml')
+          typescript: (): Promise<any> => import('highlight.js/lib/languages/typescript'),
+          css: (): Promise<any> => import('highlight.js/lib/languages/css'),
+          xml: (): Promise<any> => import('highlight.js/lib/languages/xml'),
         },
-      }
-    }
-  ]
+      },
+    },
+  ],
 })
 export class AppModule {}

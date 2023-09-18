@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ViewSeparatorComponent } from '@design/components/view-separator/view-separator.component';
@@ -19,11 +20,11 @@ import { NgxColorsModule } from 'ngx-colors';
     FormsModule, 
     CheckboxComponent, 
     CodeComponent, 
-    NgxColorsModule
+    NgxColorsModule,
   ],
   templateUrl: './box-shadow-generator.component.html',
   styleUrls: ['./box-shadow-generator.component.scss'],
-  animations: [opacityAnimation]
+  animations: [opacityAnimation],
 })
 export class BoxShadowGeneratorComponent {
   public shiftRight = 0;

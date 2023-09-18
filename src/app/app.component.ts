@@ -1,16 +1,16 @@
-import { DOCUMENT } from "@angular/common";
-import { Component, Inject, OnInit } from "@angular/core";
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
-  selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
   public ngOnInit(): void {
-    this.document.body.classList.toggle("dark", true);
+    this.document.body.classList.toggle('dark', true);
   }
 }

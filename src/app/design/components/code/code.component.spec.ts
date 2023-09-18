@@ -8,7 +8,7 @@ describe('CodeComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CodeComponent]
+      imports: [CodeComponent],
     });
     fixture = TestBed.createComponent(CodeComponent);
     component = fixture.componentInstance;

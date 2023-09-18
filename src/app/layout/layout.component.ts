@@ -12,7 +12,7 @@ import { NavigationService } from '@shared/services/navigation.service';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   standalone: true,
-  imports: [CommonModule, NavbarComponent, HeaderComponent, RouterModule]
+  imports: [CommonModule, NavbarComponent, HeaderComponent, RouterModule],
 })
 export class LayoutComponent implements OnInit {
   private readonly navigation = inject(NavigationService);
@@ -20,8 +20,8 @@ export class LayoutComponent implements OnInit {
   public open = true;
 
   public ngOnInit(): void {
-      this.navigation.open.pipe(untilDestroyed(this)).subscribe((open) => {
-        this.open = open;
-      });
+    this.navigation.open.pipe(untilDestroyed(this)).subscribe((open) => {
+      this.open = open;
+    });
   }
 }

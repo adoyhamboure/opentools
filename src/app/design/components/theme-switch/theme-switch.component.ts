@@ -7,7 +7,7 @@ import { Mode } from '@shared/enums/Mode';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './theme-switch.component.html',
-  styleUrls: ['./theme-switch.component.scss']
+  styleUrls: ['./theme-switch.component.scss'],
 })
 export class ThemeSwitchComponent {
 
@@ -15,9 +15,8 @@ export class ThemeSwitchComponent {
 
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
-  public onToggle(): void 
-  {
-    console.log('toggle')
+  public onToggle(): void {
+    console.log('toggle');
     this.document.body.classList.toggle(this.currentMode);
     if (this.currentMode === Mode.LIGHT) {
       this._updateCurrentMode(Mode.DARK);
@@ -26,7 +25,7 @@ export class ThemeSwitchComponent {
     }
   }
 
-  private _updateCurrentMode(mode: Mode) {
+  private _updateCurrentMode(mode: Mode): void {
     this.currentMode = mode;
     this.document.body.classList.toggle(mode);
 
