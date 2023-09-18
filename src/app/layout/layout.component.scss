@@ -1,8 +1,9 @@
 .wrapper {
-    padding: var(--headerHeight) 0px 0px 0px;
-    margin: 0;
+    margin: var(--headerHeight) 0px 0px 0px;
     background-color: var(--bgColorSecondary);
     transition: margin 0.15s;
+    height: calc(100vh - var(--headerHeight));
+    overflow-y: scroll;
 
     &.open {
       margin-left: var(--navbarWidth);

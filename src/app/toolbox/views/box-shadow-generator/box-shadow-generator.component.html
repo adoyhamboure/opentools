@@ -97,7 +97,9 @@
                         <ngx-colors ngx-colors-trigger colorPickerControls="no-alpha" format="rgba" [(ngModel)]="boxColor"></ngx-colors>
                     </div>
                 </div>
-                <div class="box" [style.background]="boxColor" style.boxShadow="{{inset ? 'inset' : ''}} {{shiftRight}}px {{shiftDown}}px {{blur}}px {{spread}}px {{colorWithOpacity}}"></div>
+                <div class="box-content">
+                    <div class="box" [style.background]="boxColor" style.boxShadow="{{inset ? 'inset' : ''}} {{shiftRight}}px {{shiftDown}}px {{blur}}px {{spread}}px {{colorWithOpacity}}"></div>
+                </div>
             </div>
         </div>
     </div>
