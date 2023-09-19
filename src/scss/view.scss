@@ -2,10 +2,38 @@
     padding: 20px;
 
     &__header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+
         h1 {
             margin: 0;
             font-size: 35px;
             font-weight: 600;
+        }
+
+        button {
+            border: 1px solid var(--borderColor);
+            border-radius: 4px;
+            background: transparent;
+            padding: 2px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            width: 35px;
+            height: 35px;
+
+            span {
+                font-size: 25px;
+                color: var(--textColor);
+                opacity: 0.5;
+            }
+
+            &:hover{
+                background-color: var(--bgColor);
+                transition: background-color 0.2s;
+            }
         }
     }
 
