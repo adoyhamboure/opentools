@@ -53,4 +53,16 @@ export class BoxShadowGeneratorComponent {
     return `box-shadow:${this.inset ? ' inset' : ''} ${this.shiftRight}px ${this.shiftDown}px ${this.blur}px ${this.spread}px ${this.colorWithOpacity});
 -webkit-box-shadow:${this.inset ? ' inset' : ''} ${this.shiftRight}px ${this.shiftDown}px ${this.blur}px ${this.spread}px ${this.colorWithOpacity};`;
   }
+
+  public onResetAll(): void {
+    this.shiftRight = 0;
+    this.shiftDown = 0;
+    this.spread = 0;
+    this.blur = 0;
+    this.opacity = 100;
+    this.inset = false;
+    this.color = 'rgb(0, 0, 0)';
+    this.boxColor = 'rgb(30, 136, 229)';
+    this.boxContainerColor = 'rgb(255, 255, 255)';
+  }
 }

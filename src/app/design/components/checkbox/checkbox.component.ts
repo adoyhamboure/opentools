@@ -37,6 +37,12 @@ export class CheckboxComponent implements ControlValueAccessor  {
     this.onChange(v);
   }
 
+  public id!: string;
+
+  constructor() {
+    this.id = `input_${Math.floor((Math.random() * 10000) + 1)}`;
+  }
+
   private onChange: (_: any) => void = (_: any) => {};
 
   private onTouch = (): void => {};

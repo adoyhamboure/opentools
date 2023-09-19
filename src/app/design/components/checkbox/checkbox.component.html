@@ -1,6 +1,6 @@
 <div class="cntr">
-    <input [(ngModel)]="value" [checked]="checked" [disabled]="disabled" [required]="required" type="checkbox" id="cbx" class="hidden-xs-up">
-    <label for="cbx" class="cbx"></label>
+    <input [name]="id" [id]="id" [(ngModel)]="value" [checked]="checked" [disabled]="disabled" [required]="required" type="checkbox" class="cbx-input hidden-xs-up">
+    <label for="cbx" class="cbx" (click)="writeValue(!value)"></label>
     <span class="label" (click)="writeValue(!value)">
         <ng-content></ng-content>
     </span>
