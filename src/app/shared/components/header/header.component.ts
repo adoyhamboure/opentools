@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ThemeSwitchComponent } from '@design/components/theme-switch/theme-switch.component';
+import { environment } from '@env/environment';
 import { NavigationService } from '@shared/services/navigation.service';
 
 
@@ -14,6 +15,7 @@ import { NavigationService } from '@shared/services/navigation.service';
 export class HeaderComponent {
   private readonly navigation = inject(NavigationService);
 
+  public version = environment.version;
 
   public onMenuClick(): void {
     this.navigation.toggle();

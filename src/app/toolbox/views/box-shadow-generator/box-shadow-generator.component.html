@@ -68,14 +68,16 @@
 
                 <div class="option">
                     <div class="option__title">
-                        <span>Color : {{color}} </span>
+                        <span class="color">
+                    <ngx-colors ngx-colors-trigger format="rgba" [(ngModel)]="color"></ngx-colors>
+
+                            Color : {{color}} </span>
                         <button (click)="color = 'rgb(0, 0, 0)'">
                             <span class="material-symbols-outlined">
                                 restart_alt
                             </span>
                         </button>
                     </div>
-                    <ngx-colors ngx-colors-trigger format="rgba" [(ngModel)]="color"></ngx-colors>
                 </div>
 
                 <div class="option">
