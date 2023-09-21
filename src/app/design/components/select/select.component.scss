@@ -1,0 +1,38 @@
+select {
+    width: 300px;
+    height: 40px;
+    border: 1px solid var(--borderColor);
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 400;
+    background: transparent;
+    border-radius: 6px;
+    animation: select-animation 0.3s ease-in-out;
+    appearance: none;
+    color: var(--textColor);
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+
+    &:focus {
+      border-color: var(--textColor);
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &:hover {
+        background: var(--bgColorSecondary);
+        transition: background-color 0.3s ease-in-out;
+    }
+}
+
+@keyframes select-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

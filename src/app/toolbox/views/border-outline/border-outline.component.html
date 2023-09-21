@@ -1,6 +1,6 @@
 <div class="view">
     <div class="view__header" @fadeIn>
-        <h1>Box Shadow Generator</h1>
+        <h1>Border / Outline Generator</h1>
         <button (click)="onResetAll()">
             <span class="material-symbols-outlined">
                 restart_alt
@@ -11,64 +11,20 @@
     <div class="view__content" @fadeIn>
         <div class="view__content__options">
             <div class="view__content__options__card">
+                <!-- TODO: Individual Borders settings -->
+                <!-- <div class="option">
+                    <app-checkbox [(ngModel)]="individualBorders">Target individual border</app-checkbox>
+                </div> -->
                 <div class="option">
                     <div class="option__title">
-                        <span>Shift Right : {{shiftRight}} </span>
-                        <button (click)="shiftRight = 0">
+                        <span>Width : {{allBorderWidth}}px </span>
+                        <button (click)="allBorderWidth = 1">
                             <span class="material-symbols-outlined">
                                 restart_alt
                             </span>
                         </button>
                     </div>
-                    <app-slider [max]="50" [min]="-50" [(ngModel)]="shiftRight"></app-slider>
-                </div>
-    
-                <div class="option">
-                    <div class="option__title">
-                        <span>Shift Down : {{shiftDown}} </span>
-                        <button (click)="shiftDown = 0">
-                            <span class="material-symbols-outlined">
-                                restart_alt
-                            </span>
-                        </button>
-                    </div>
-                    <app-slider [max]="50" [min]="-50" [(ngModel)]="shiftDown"></app-slider>
-                </div>
-    
-                <div class="option">
-                    <div class="option__title">
-                        <span>Spread : {{spread}} </span>
-                        <button (click)="spread = 0">
-                            <span class="material-symbols-outlined">
-                                restart_alt
-                            </span>
-                        </button>
-                    </div>
-                    <app-slider [max]="50" [min]="-30" [(ngModel)]="spread"></app-slider>
-                </div>
-    
-                <div class="option">
-                    <div class="option__title">
-                        <span>Blur : {{blur}} </span>
-                        <button (click)="blur = 0">
-                            <span class="material-symbols-outlined">
-                                restart_alt
-                            </span>
-                        </button>
-                    </div>
-                    <app-slider [max]="50" [min]="0" [(ngModel)]="blur"></app-slider>
-                </div>
-
-                <div class="option">
-                    <div class="option__title">
-                        <span>Opacity : {{opacity/100}} </span>
-                        <button (click)="opacity = 100">
-                            <span class="material-symbols-outlined">
-                                restart_alt
-                            </span>
-                        </button>
-                    </div>
-                    <app-slider [max]="100" [min]="0" [(ngModel)]="opacity"></app-slider>
+                    <app-slider [max]="50" [min]="0" [(ngModel)]="allBorderWidth"></app-slider>
                 </div>
 
                 <div class="option">
@@ -85,9 +41,28 @@
                 </div>
 
                 <div class="option">
-                    <app-checkbox [(ngModel)]="inset">Inset</app-checkbox>
+                    <div class="option__title">
+                        <span>Opacity : {{opacity/100}} </span>
+                        <button (click)="opacity = 100">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-slider [max]="100" [min]="0" [(ngModel)]="opacity"></app-slider>
                 </div>
 
+                <div class="option">
+                    <div class="option__title">
+                        <span>Type :  </span>
+                        <button (click)="opacity = 100">
+                            <span class="material-symbols-outlined">
+                                restart_alt
+                            </span>
+                        </button>
+                    </div>
+                    <app-select [(ngModel)]="type" (ngModelChange)="log($event)" [list]="borderTypes"></app-select>
+                </div>
             </div>
         </div>
         <div class="view__content__preview">
@@ -104,7 +79,7 @@
                     </div>
                 </div>
                 <div class="box-content">
-                    <div class="box" [style.background]="boxColor" style.boxShadow="{{inset ? 'inset' : ''}} {{shiftRight}}px {{shiftDown}}px {{blur}}px {{spread}}px {{colorWithOpacity}}"></div>
+                    <div class="box" [style.background]="boxColor" style.border="{{allBorderWidth}}px {{type}} {{colorWithOpacity}}"></div>
                 </div>
             </div>
         </div>

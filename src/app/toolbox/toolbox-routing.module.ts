@@ -11,6 +11,11 @@ const routes: Routes = [
     loadComponent: () => 
       import('./views/box-shadow-generator/box-shadow-generator.component').then((c) => c.BoxShadowGeneratorComponent),
   },
+  {
+    path: 'border',
+    loadComponent: () => 
+      import('./views/border-outline/border-outline.component').then((c) => c.BorderOutlineComponent),
+  },
 ];
 
 @NgModule({
