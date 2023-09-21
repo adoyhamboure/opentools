@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { ToastrModule } from 'ngx-toastr';
-import { APP_BASE_HREF } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,7 +23,6 @@ import { APP_BASE_HREF } from '@angular/common';
         },
       },
     },
-    { provide: APP_BASE_HREF, useValue: '/' },
   ],
 })
 export class AppModule {}
