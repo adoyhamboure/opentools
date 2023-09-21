@@ -64,7 +64,13 @@ export class BorderOutlineComponent {
   }
 
   public onResetAll(): void {
-
+    this.individualBorders = false;
+    this.allBorderWidth = 1;
+    this.color = 'rgb(0, 0, 0)';
+    this.boxColor = 'rgb(30, 136, 229)';
+    this.boxContainerColor = 'rgb(255, 255, 255)';
+    this.opacity = 100;
+    this.type = this.borderTypes[0].value;
   }
 
   public log(e:any): void {
