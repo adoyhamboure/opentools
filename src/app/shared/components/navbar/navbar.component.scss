@@ -18,20 +18,21 @@ nav {
         a {
             color: var(--textColor);
             text-decoration: none;
-            }
 
-            &:hover {
-                background-color: var(--bgColorSecondary);
+            li {
+                padding: 5px 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 20px;
+                cursor: pointer;
+                &:hover {
+                    background-color: var(--bgColorSecondary);
+                }
             }
-
-        li {
-            padding: 5px 20px;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            cursor: pointer;
         }
+
+
     }
 }
